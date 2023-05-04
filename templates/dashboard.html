@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block body %}  
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('{{url_for('static',filename='assets/img/admin-img.jpg')}}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1> ADIMIN PAGE</h1>
+                    <span class="subheading">A PAGE CREATED FOR ADMIN</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<p>Click on the "Choose File" button to upload a file:</p>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <input type="file" id="myFile" name="filename">
+  <input type="submit">
+</form>
+ <div class="button-group">
+                <a href="/logout">
+                <button class="big-button orange-button" id="submitButton" type="submit">logout</button>
+                </a>
+
+<table class="table table-bordered table-light">
+    <thead>
+      <tr>
+        <th scope="col">s.no</th>
+        <th scope="col">title</th>
+        <th scope="col">posted by</th>
+        <th scope="col">date</th>
+
+        <th scope="col">make changes</th>
+        
+      </tr>
+    </thead>
+
+
+
+
+{% for posters in posts %}
+
+
+    <tbody>
+      <tr>
+        <th scope="row">{{posters.sno}}</th>
+        <td>{{posters.title}}</td>
+        <td>{{posters.posted_by}}</td>
+        <td>{{posters.date}}</td>
+        <td><div class="button-group">
+                <a href="/editpost/{{posters.sno}}" target="_blank">
+                <button class="big-button orange-button" id="submitButton" type="submit">edit</button>
+                </a>
+
+            <div class="button-group">
+                <a href="/delete/{{posters.sno}}" target="_blank">
+                <button class="big-button orange-button" id="submitButton" type="submit">delete</button>
+                </a>
+
+        </td>
+      </tr>  
+    </tbody>
+  
+  {% endfor %}
+</table>
+
+
+{% endblock %}

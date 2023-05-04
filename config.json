@@ -1,0 +1,18 @@
+{
+  "params": {
+    "local_uri": "mysql+mysqldb://root:@localhost/coding thunder?unix_socket=/opt/lampp/var/mysql/mysql.sock",
+    "production_uri": "",
+    "websitename": "webdeveloper",
+    "fb_url": "https://facebook.com/codingthunder",
+    "twt_url": "https://twitter.com/codingthunder",
+    "git_url": "https://github.com/codingthunder",
+    "MAIL_USERNAME": "adasdsfsdgfdssssssg",
+    "MAIL_PASSWORD": "#",
+    "about_me": "du Plessis was given a six-month contract with Lancashire County Cricket Club for the 2008 season as a Kolpak player after impressing the board with good performances in the local Nottinghamshire leagues for Mansfield Hosiery Mills and in the Lancashire League for Todmorden.[24][25] Following his initial stint with the club, du Plessis signed a new three-year deal. Lancashire coach Mike Watkinson praised du Plessis' fielding, saying \"if there's a better fielder in county cricket I've not seen him this season\".[26] In March 2010, it was announced that du Plessis would no longer be allowed to play for Lancashire as a Kolpak player after changes to the Kolpak rules. In 2011, he was signed by Chennai Super Kings to play in the Indian Premier League.[27]",
+    "no_of_posts": 2,
+    "login_img": "login_image.png",
+    "admin_user":"user",
+    "admin_password":"arjun",
+    "upload_location":"C:\\Users\\DELL\\PycharmProjects\\pythonProject\\static\\assets\\img"
+  }
+}

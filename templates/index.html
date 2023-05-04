@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block body %}  
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('{{url_for('static',filename='assets/img/home-bg.jpg')}}')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1> {{params['websitename']}}</h1>
+                            <span class="subheading">a blog liked by amithcoder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        
+    
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                    {% for post in posts %}
+        
+                    <div class="post-preview">
+                        <a href="/post/{{post.slug}}">
+                            <h2 class="post-title">{{post.title}}</h2>
+                            <h3 class="post-subtitle">{{post.tagline}}</h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">{{post.posted_by}}</a>
+                          on  {{post.date}}
+                        </p>
+                    </div>
+                    {{post.content[0:143]}}
+                    <!-- Divider-->
+                    <hr class="my-4" />
+              {% endfor %}      
+              <div class="button-group">
+                <a href="/addpost" target="_blank">
+                <button class="big-button orange-button" id="submitButton" type="submit">add post</button>
+                </a>
+                <a href="{{next}}" >
+                <button class="big-button orange-button" id="submitButton" type="submit">new post</button>
+                </a>
+                <a href="{{prev}}" >
+                  <button class="big-button orange-button" id="submitButton" type="submit">old post</button>
+                </a>
+              </div>
+              
+              
+              
+              
+              
+                    
+      {% endblock %}
