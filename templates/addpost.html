@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Submit a Blog Post</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-image: url('https://example.com/background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Container for the form */
+      .form-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      /* Form fields */
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+        color: #555;
+      }
+
+      input[type="text"],
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+      }
+
+      textarea {
+        height: 200px;
+      }
+
+      /* Submit button */
+      button[type="submit"] {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #0069d9;
+      }
+
+      /* Form header */
+      .form-header {
+        margin-bottom: 40px;
+      }
+
+      .form-header h1 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      .form-header p {
+        font-size: 18px;
+        font-weight: 400;
+        color: #555;
+        margin: 10px 0 0 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-header">
+        <h1>Submit a Blog Post</h1>
+        <p>Please fill out the form below to submit your blog post.</p>
+      </div>
+
+      <form action="/addpost" method="post">
+        <label for="post-title">Post Title</label>
+        <input type="text" id="post-title" name="post-title" required>
+
+        <label for="post-content">Post Content</label>
+        <textarea id="post-content" name="post-content" required></textarea>
+
+        <label for="post-tagline">Post Tagline</label>
+        <input type="text" id="post-tagline" name="post-tagline" required>
+
+        <button type="submit">Submit Post</button>
+      </form>
+    </div>
+    
+    

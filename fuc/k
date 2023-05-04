@@ -1,0 +1,89 @@
+# to check vedio resolution
+    replace <filename> with your vedioname
+    """ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 <filename>"""
+
+# to download vedio to another folder
+example
+   
+    replace https://www.youtube.com/watch?v=VIDEO_ID this with the wnatdownload vedio URL       
+    """/usr/bin/yt-dlp -o ~/Video/%\(title\)s.%\(ext\)s https://www.youtube.com/watch?v=4J2PR9GCad0"""
+
+
+
+
+
+
+
+# to add packages in python at once follow this 
+    Example
+
+    requirements.txt
+
+    Django==1.3
+    Fabric==1.2.0
+    Jinja2==2.5.5
+    PyYAML==3.09
+    To install these packages in one time use:
+
+    pip install -r /path/to/requirements.txt
+
+    Moreover, when you run the application in your local machine then the virtual environment files might change, which will make push useless things to your repo.
+    
+    Note: if you want to know which packages installed in your virtual environment then use pip freeze
+
+    If you want to export the packages to requirements.txt then run
+
+    pip freeze > requirements.txt
+
+
+
+###################to delete directory use#####################
+                  1. rm -r <directory_name>
+ ############################# to delete "write protected file" do force delete ########################
+                                  1.  rm -r -f <directory_name>
+
+"""""""""""""""""""""""" git log --oneline  """""""""""""""""""""""""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ChatGPT
+Yes, you can add files and directories from other directories to a Git repository even if the .git directory is not present in those directories.
+
+To add files or directories from another directory to your Git repository, you can use the git add command followed by the path to the file or directory that you want to add. For example, if you have a directory named new_folder located at /home/user/new_folder that you want to add to your Git repository, you can use the following command:
+
+    sql
+    Copy code
+    git add /home/user/new_folder
+    This will add the entire new_folder directory and all its contents to your Git repository. You can also add individual files within the directory by specifying their    
+    paths relative to the directory. For example, to add a file named new_file.txt located at /home/user/new_folder/new_file.txt, you can use the following command:
+
+    sql
+    Copy code
+    git add /home/user/new_folder/new_file.txt
+    Once you have added the files or directories to your Git repository using the git add command, you can commit your changes using the git commit command followed by a    commit message:
+
+sql
+Copy code
+git commit -m "Added new_folder directory and new_file.txt file"
+This will commit your changes to the Git repository, including the new files and directories that you added.
+
+Note that if you are adding files or directories from outside the Git repository directory, you may need to use the absolute path to the file or directory, as shown in the examples above.
+   
+
+
+
+      
